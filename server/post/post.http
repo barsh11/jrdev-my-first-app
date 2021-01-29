@@ -1,0 +1,45 @@
+
+POST  http://localhost:3000/post HTTP/1.1
+content-type: application/json
+Cookie: userId=cec4c84d83f09d4b
+
+{
+  "text": "dogs are alll around use. Where does it",
+  "pictures": [
+     "https://cdn.pixabay.com/photo/2015/04/08/15/09/daisy-712892_1280.jpg",
+      "https://cdn.pixabay.com/photo/2014/01/22/19/44/flower-field-250016_1280.jpg"
+  ]
+}
+
+###
+
+GET http://localhost:3000/post/ce724bf8c6dd0982 HTTP/1.1
+
+
+###
+
+
+PATCH  http://localhost:3000/post/ce724bf8c6dd0982 HTTP/1.1
+content-type: application/json
+Cookie: userId=cec4c84d83f09d4b
+
+{
+  "text": "Other text that I have edited for the post"
+}
+
+
+###
+
+DELETE http://localhost:3000/post/ce724bf8c6dd0982 HTTP/1.1
+
+
+###
+
+
+GET http://localhost:3000/post/?offset=55
+
+###
+
+GET http://localhost:3000/post/signedUrl?fileName=pic1.png HTTP/1.1
+
+###
